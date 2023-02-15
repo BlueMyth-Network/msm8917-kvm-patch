@@ -200,14 +200,7 @@ index c3191168..b14649f4 100644
  
  __invalid:
  	b	.
-+#endif
-+
-+exynos_entry:
-+ldr x3, [x0, #24]
-+ldr x2, [x0, #16]
-+ldr x1, [x0, #8]
-+ldr x0, [x0]
- 
+
  	/*
  	 * x0: HYP boot pgd
 @@ -111,8 +119,14 @@ target: /* We're now in the trampoline code, switch page tables */
