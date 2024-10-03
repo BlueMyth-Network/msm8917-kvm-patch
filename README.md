@@ -46,4 +46,4 @@ KVM/ARM bootstrap process with this patch:
 
 **What did not work:**
 * In the early bootup code, use the backdoor to enter EL2, and continue booting from there, imitating normal EL2 boot. This probably fails later when secondary cores boot up, causing a sanity check in `arch/arm64/include/asm/virt.h` to fail (boot CPU booted in EL2, others in EL1).
-* Use the backdoor early to bootstrap a valid-looking HYP stub, then let KVM boot normally. Does not work due to the custom `vbar_el2` handling, see above.
+* Use the backdoor early to bootstrap a valid-looking HYP stub, then let KVM boot normally. Does not work due to the custom `vbar_el2` handling, see above..
